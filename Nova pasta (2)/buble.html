@@ -1,0 +1,24 @@
+<html>
+
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="pok.css">
+            <script>
+                function atkBubble(){
+                    var body = document.querySelector('body');
+                    var atk = document.createElement('span');
+                    var size = Math.random() *50;
+                    atk.style.width = 50 + size + 'px';
+                    atk.style.height = 50 + size + 'px';
+                    atk.style.left = Math.random() * innerWidth + "px";
+                    body.appendChild(atk);
+
+                    setTimeout(() => {
+                        atk.remove();
+                    },4000);
+                }
+                setInterval(atkBubble,50);
+            </script>
+    </head>
+
+</html>
